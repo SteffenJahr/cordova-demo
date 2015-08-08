@@ -1,0 +1,26 @@
+<form class="form-horizontal" name="recipeForm">
+    <div class="form-group">
+        <label class="control-label col-sm-2">Rezeptname</label>
+
+        <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="Name" ng-model="recipe.title" required/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2">Rezept</label>
+
+        <div class="col-sm-10">
+            <textarea class="form-control" rows="10" placeholder="Zutatenliste" ng-model="recipe.text" required></textarea>
+        </div>
+    </div>
+    <div class="form-group" ng-if="isCordovaApp">
+        <div class="col-sm-offset-8 col-sm-4">
+            <button type="button" class="btn btn-default pull-right" ng-click="takePicture()">Foto aufnehmen</button>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-8 col-sm-4">
+            <button type="submit" class="btn btn-primary pull-right" ng-click="save()">Speichern</button>
+        </div>
+    </div>
+</form>

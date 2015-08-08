@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-md-2 col-sm-3 text-center">
+        <a class="story-title" ng-click="detail(item.id)" href><img ng-src="{{item.image || 'img/food_placeholder.png'}}"
+                                                                    style="width:100px;height:100px" class="img-circle"></a>
+    </div>
+    <div class="col-md-10 col-sm-9">
+        <h3>{{item.title}}</h3>
+
+        <div class="row">
+            <div class="col-sm-9">
+                <p>
+                    {{item.text}}
+                </p>
+            </div>
+        </div>
+        <ul class="list-inline pull-right">
+            <li><a ng-click="edit(item.id)">Bearbeiten</a></li>
+            <li><a ng-click="delete(item.id)">Löschen</a></li>
+        </ul>
+    </div>
+</div>

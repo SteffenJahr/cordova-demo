@@ -1,0 +1,18 @@
+<div class="row" ng-click="detail(item.id)" style="cursor: pointer" ng-repeat="item in items | orderBy: '-id'">
+    <div class="col-md-2 col-sm-3 text-center">
+        <img ng-src="{{item.image || 'img/food_placeholder.png'}}" style="width:100px;height:100px" class="img-circle">
+    </div>
+    <div class="col-md-10 col-sm-9">
+        <h3>{{item.title}}</h3>
+
+        <div class="row">
+            <div class="col-xs-9">
+                <p class="preview-text">
+                    {{item.text}}<br>
+                    <b>Weiterlesen</b>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>

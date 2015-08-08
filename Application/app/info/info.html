@@ -1,0 +1,17 @@
+<div class="row" ng-if="!isCordovaApp">
+    <div class="col-xs-12" style="min-height: 200px;">
+        Diese Applikation läuft als Web-Applikation.
+    </div>
+</div>
+<div ng-if="isCordovaApp">
+    <div class="row">
+        <div class="col-xs-12">
+            <strong>Plattform:</strong> {{info.manufacturer}} {{info.platform}} {{info.version}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <strong>Cordova:</strong> {{info.cordova}}
+        </div>
+    </div>
+</div>
