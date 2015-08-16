@@ -8,6 +8,9 @@
     if ('addEventListener' in document) {
         document.addEventListener('DOMContentLoaded', function () {
             FastClick.attach(document.body);
+            if(!window.isCordovaApp){
+            	angular.bootstrap(document, ['recipeBook']);	
+            }
         }, false);
     }
 
@@ -33,8 +36,5 @@
                 }
             }
         }, false);
-    }
-    else {
-        angular.bootstrap(document, ['recipeBook']);
     }
 })();
